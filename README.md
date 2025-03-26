@@ -264,7 +264,8 @@ return Application::configure(basePath: dirname(__DIR__))
     })->create();
     ````
   - ✅ Step 7, Create Routes We need to add a number of routes for the users module, products module, and roles module. In these routes, I also use middleware with permissions for the roles and products routes, so add routes this way:
-**routes/web.php**
+
+- routes/web.php
 
 ````
 <?php
@@ -292,7 +293,7 @@ Route::group(['middleware' => ['auth']], function() {
 ````
 - ✅ Step 8, we have added three controllers for the users module, products module, and roles module. So, you can create three controllers as below:
 
-**app/Http/Controllers/UserController.php**
+- app/Http/Controllers/UserController.php
 
 ````
 php artisan make:controller UserController
